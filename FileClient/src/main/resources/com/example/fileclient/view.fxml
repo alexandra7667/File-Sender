@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fileclient.Controller">
+   <children>
+      <TextField fx:id="textFieldHostName" layoutX="32.0" layoutY="148.0" promptText="Enter host name..." />
+      <TextField fx:id="textFieldHostPort" layoutX="32.0" layoutY="181.0" promptText="Enter host port...(2000)" />
+      <Button layoutX="33.0" layoutY="213.0" mnemonicParsing="false" onAction="#getFiles" prefHeight="26.0" prefWidth="98.0" text="Get list of files" textAlignment="CENTER" />
+      <ListView fx:id="listView" layoutX="352.0" layoutY="54.0" prefHeight="281.0" prefWidth="200.0" />
+      <Label layoutX="352.0" layoutY="34.0" text="Files available for download:" textFill="#545454" />
+      <Label layoutX="28.0" layoutY="23.0" text="File Client">
+         <font>
+            <Font name="Helvetica" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="102.0" text="1) Enter host name and host port.&#10;The Server is by default running on port 2000." />
+      <Label layoutX="33.0" layoutY="301.0" text="2) Choose one file at a time and click Download&#10;to download the file locally." />
+      <Button layoutX="352.0" layoutY="341.0" mnemonicParsing="false" onAction="#downloadFile" text="Download" />
+      <Label fx:id="labelDownloadedFiles" layoutX="432.0" layoutY="345.0" text="Downloaded files:  0" />
+   </children>
+</AnchorPane>
